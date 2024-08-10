@@ -1,0 +1,17 @@
+<!-- generator/templates/generator/home.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Password Generator</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'generator/styles.css' %}">
+</head>
+<body>
+    <h1>Generate a Password</h1>
+    <form action="{% url 'password' %}">
+        <label for="length">Password Length:</label>
+        <input type="number" id="length" name="length" value="12" min="1" max="100">
+        <button type="submit">Generate</button>
+    </form>
+</body>
+</html>
